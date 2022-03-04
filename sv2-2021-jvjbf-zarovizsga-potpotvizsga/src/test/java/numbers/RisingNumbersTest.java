@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RisingNumbersTest {
 
-    /*RisingNumbers risingNumbers = new RisingNumbers();
+    RisingNumbers risingNumbers = new RisingNumbers();
 
     @Test
     void testGetNumberOfSixDigitRisingNumbersWithRisingNumbers() {
@@ -35,5 +35,5 @@ class RisingNumbersTest {
         Exception ex = assertThrows(IllegalArgumentException.class,
             () -> risingNumbers.getNumberOfSixDigitRisingNumbers(null));
         assertEquals("There are no numbers!", ex.getMessage());
-    }*/
+    }
 }

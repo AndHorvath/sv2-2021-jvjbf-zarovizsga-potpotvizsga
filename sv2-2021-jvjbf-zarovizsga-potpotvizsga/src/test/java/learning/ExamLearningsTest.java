@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExamLearningsTest {
 
-    /*ExamLearnings examLearnings;
+    ExamLearnings examLearnings;
 
     @BeforeEach
     void init() {
@@ -41,5 +41,5 @@ class ExamLearningsTest {
         Exception ex = assertThrows(IllegalArgumentException.class,
             () -> examLearnings.getAverageLearningInMinutes());
         assertEquals("There are no learning times.", ex.getMessage());
-    }*/
+    }
 }

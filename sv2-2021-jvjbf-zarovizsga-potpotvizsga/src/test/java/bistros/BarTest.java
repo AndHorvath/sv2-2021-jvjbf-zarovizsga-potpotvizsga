@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BarTest {
 
-    /*@Test
+    @Test
     void createBarTest(){
         Bistro bar = new Bar("Best Bar",new Address("Kossuth",13));
 
@@ -40,5 +40,5 @@ class BarTest {
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, ()->bar.addMenuItem(new MenuItem("Chicken",3450,MenuItemType.FOOD)));
 
         assertEquals("Only drink can be added to menu!",iae.getMessage());
-    }*/
+    }
 }

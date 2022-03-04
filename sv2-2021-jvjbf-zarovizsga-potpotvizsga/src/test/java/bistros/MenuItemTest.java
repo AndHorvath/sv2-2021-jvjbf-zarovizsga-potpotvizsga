@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MenuItemTest {
 
-    /*@Test
+    @Test
     void createMenuItemTest(){
         MenuItem menuItem = new MenuItem("Chicken",3450,MenuItemType.FOOD);
 
@@ -22,5 +22,5 @@ class MenuItemTest {
         menuItem = new MenuItem("Coke",500,MenuItemType.DRINK);
 
         assertEquals(635, menuItem.getPrice());
-    }*/
+    }
 }

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CityTest {
 
-    /*City city = new City();
+    City city = new City();
 
     @BeforeEach
     void init(){
@@ -88,5 +88,5 @@ class CityTest {
         assertEquals(List.of("Best bistro","Good bistro","Cool bistro"),city.findBistroWithMenuItem("Chicken").stream().map(Bistro::getName).toList());
         assertEquals(List.of("Best bistro","Cool bistro","Best bar (Only Drinks)"),
             city.findBistroWithMenuItem("Beer").stream().map(Bistro::getName).toList());
-    }*/
+    }
 }

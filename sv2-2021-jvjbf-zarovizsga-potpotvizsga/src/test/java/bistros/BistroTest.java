@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BistroTest {
 
-    /*@Test
+    @Test
     void createBistroTest() {
         Bistro bistro = new Bistro("Best Bistro", new Address("Kossuth", 17));
 
@@ -38,5 +38,5 @@ class BistroTest {
 
         bistro1 = new Bar("Best Bistro", new Address("Kossuth", 16));
         assertFalse(bistro1.equals(bistro));
-    }*/
+    }
 }

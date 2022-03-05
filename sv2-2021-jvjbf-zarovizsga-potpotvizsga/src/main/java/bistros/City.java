@@ -44,6 +44,4 @@ public class City {
                 bistro.getMenu().stream().anyMatch(menuItem -> menuItem.getName().equals(menuItemName)))
             .toList();
     }
-
-
 }

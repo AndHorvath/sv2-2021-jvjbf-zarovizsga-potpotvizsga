@@ -32,11 +32,12 @@ public class ExamLearnings {
                 updateLearnings(line);
             }
         } catch (IOException exception) {
-            throw new IllegalArgumentException("Cannot read file.", exception);
+            throw new IllegalStateException("Cannot read file.", exception);
         }
     }
 
     public double getAverageLearningInMinutes() {
+        validateInitialData();
         return learnings.values().stream().mapToInt(time -> time).sum() / (double) learnings.size();
     }
 
@@ -47,14 +48,24 @@ public class ExamLearnings {
         String[] data = line.split(";");
         validateParameter(data);
         for (int i = 1; i < data.length; i++) {
-            overallTime += Double.parseDouble(data[i]) * 60;
+            overallTime += Double.parseDouble(data[i].replace(',', '.')) * 60;
         }
         learnings.put(data[0], overallTime);
     }
 
     private void validateParameter(String[] data) {
         if (data.length <= 1) {
-            throw new IllegalArgumentException("There are no learning times.");
+            throwMissingDataException();
         }
+    }
+
+    private void validateInitialData() {
+        if (learnings.size() == 0) {
+            throwMissingDataException();
+        }
+    }
+
+    private void throwMissingDataException() {
+        throw new IllegalArgumentException("There are no learning times.");
     }
 }

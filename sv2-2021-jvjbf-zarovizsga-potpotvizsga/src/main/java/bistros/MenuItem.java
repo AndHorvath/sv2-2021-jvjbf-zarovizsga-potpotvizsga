@@ -24,6 +24,6 @@ public class MenuItem {
     // --- public methods -----------------------------------------------------
 
     public double getPrice() {
-        return type == MenuItemType.FOOD ? price * 1.2 : price * 1.27;
+        return price * (1 + type.getTax() / 100d);
     }
 }

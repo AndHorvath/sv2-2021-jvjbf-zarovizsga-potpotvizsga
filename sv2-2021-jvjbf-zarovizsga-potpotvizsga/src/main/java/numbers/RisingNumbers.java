@@ -21,17 +21,15 @@ public class RisingNumbers {
         int auxNumber = number;
         int lastDigit;
         int beforeLastDigit;
-        boolean isRising = true;
         while (auxNumber > 0) {
             lastDigit = auxNumber % 10;
             auxNumber /= 10;
             beforeLastDigit = auxNumber % 10;
             if (beforeLastDigit >= lastDigit) {
-                isRising = false;
-                break;
+                return false;
             }
         }
-        return isRising;
+        return true;
     }
 
     private boolean isNumberToConsider(int number) {

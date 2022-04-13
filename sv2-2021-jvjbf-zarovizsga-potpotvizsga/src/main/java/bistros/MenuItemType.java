@@ -10,11 +10,11 @@ public enum MenuItemType {
 
     // --- constructors -------------------------------------------------------
 
-    MenuItemType(int tax){
+    MenuItemType(int tax) {
         this.tax = tax;
     }
 
     // --- getters and setters ------------------------------------------------
 
-    public int getTax(){ return tax; }
+    public int getTax() { return tax; }
 }

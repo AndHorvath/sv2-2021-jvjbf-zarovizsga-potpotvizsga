@@ -38,10 +38,6 @@ public class City {
     }
 
     public List<Bistro> findBistroWithMenuItem(String menuItemName) {
-        return bistros.stream()
-            .filter(
-                bistro ->
-                bistro.getMenu().stream().anyMatch(menuItem -> menuItem.getName().equals(menuItemName)))
-            .toList();
+        return bistros.stream().filter(bistro -> bistro.hasMenuItem(menuItemName)).toList();
     }
 }

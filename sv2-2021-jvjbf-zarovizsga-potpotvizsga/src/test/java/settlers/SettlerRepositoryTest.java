@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SettlerRepositoryTest {
 
-    /*SettlerRepository settlerRepository;
+    SettlerRepository settlerRepository;
     MariaDbDataSource dataSource;
 
     @BeforeEach
     void init() {
         try {
             dataSource = new MariaDbDataSource();
-            dataSource.setUrl("jdbc:mariadb://localhost:3306/exam-test?useUnicode=true");
+            dataSource.setUrl("jdbc:mariadb://localhost:3306/exam_test?useUnicode=true");
             dataSource.setUser("root");
-            dataSource.setPassword("training");
+            dataSource.setPassword("root");
         } catch (SQLException sqle) {
             throw new IllegalStateException("Cannot connect to database", sqle);
         }
@@ -65,5 +65,5 @@ class SettlerRepositoryTest {
         assertEquals("Jack Doe", expected.getNameOfSettler());
         assertEquals(10, expected.getAmountOfTobacco());
         assertEquals(5_000, expected.getExpectedIncome());
-    }*/
+    }
 }

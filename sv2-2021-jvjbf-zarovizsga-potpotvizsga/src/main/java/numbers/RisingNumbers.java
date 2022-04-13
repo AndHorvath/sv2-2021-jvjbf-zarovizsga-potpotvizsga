@@ -13,6 +13,10 @@ public class RisingNumbers {
 
     // --- private methods ----------------------------------------------------
 
+    private boolean isNumberToConsider(int number) {
+        return isSixDigitNumber(number) && isRisingNumber(number);
+    }
+
     private boolean isSixDigitNumber(int number) {
         return 99_999 < number && number < 1_000_000;
     }
@@ -20,20 +24,16 @@ public class RisingNumbers {
     private boolean isRisingNumber(int number) {
         int auxNumber = number;
         int lastDigit;
-        int beforeLastDigit;
+        int digitBeforeLastDigit;
         while (auxNumber > 0) {
             lastDigit = auxNumber % 10;
             auxNumber /= 10;
-            beforeLastDigit = auxNumber % 10;
-            if (beforeLastDigit >= lastDigit) {
+            digitBeforeLastDigit = auxNumber % 10;
+            if (digitBeforeLastDigit >= lastDigit) {
                 return false;
             }
         }
         return true;
-    }
-
-    private boolean isNumberToConsider(int number) {
-        return isSixDigitNumber(number) && isRisingNumber(number);
     }
 
     private void validateParameter(List<Integer> numbers) {

@@ -32,6 +32,10 @@ public class Bistro {
         menu.add(menuItem);
     }
 
+    public boolean hasMenuItem(String menuItemName) {
+        return menu.stream().anyMatch(menuItem -> menuItem.getName().equals(menuItemName));
+    }
+
     @Override
     public boolean equals(Object other) {
         if (this == other) return true;
